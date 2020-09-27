@@ -1,5 +1,5 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/RunsetTech/openvpn-install/master/openvpn-install.sh
+curl -O https://raw.githubusercontent.com/RunsetTech/openvpn-install/master/openvpn-install.sh
 chmod +x openvpn-install.sh
 export DEBIAN_FRONTEND=noninteractive
 
@@ -70,8 +70,9 @@ sudo systemctl enable ghost
 #export AUTO_INSTALL=y
 export APPROVE_IP=n
 export IPV6_SUPPORT=n
-export PORT_CHOICE=1
-export PROTOCOL_CHOICE=1
+export PORT_CHOICE=2
+export PORT=443
+export PROTOCOL_CHOICE=2
 export DNS=1
 export COMPRESSION_ENABLED=n
 export CUSTOMIZE_ENC=n
@@ -82,5 +83,5 @@ sudo AUTO_INSTALL=y ./openvpn-install.sh
 # sudo DEBIAN_FRONTEND=noninteractive AUTO_INSTALL=y ./openvpn-install.sh
 # sudo systemctl start openvpn
 cat client.ovpn
-# maybe echo nima
-# and maybe reboot
+echo nimaaaa
+sudo reboot
